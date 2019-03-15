@@ -2,6 +2,8 @@ import Taro from '@tarojs/taro'
 import { View } from '@tarojs/components'
 import { AtTabs, AtTabsPane } from 'taro-ui'
 import SwiperIndex from '../Swiper/Swiper'
+import FlexIndex from '../Flex/Flex'
+import SwiperContent from '../Swiper/SwiperContent'
 import './Tabs.scss'
 
 // 标签页
@@ -38,6 +40,8 @@ export default class TabsIndex extends Taro.Component{
       >
         <AtTabsPane current={this.state.current} index={0}>
           <SwiperIndex />
+          <FlexIndex />
+          <SwiperContent />
         </AtTabsPane>
         <AtTabsPane current={this.state.current} index={1}>
           <View style='font-size:18px;text-align:center;height:100px;'>标签页二的内容</View>

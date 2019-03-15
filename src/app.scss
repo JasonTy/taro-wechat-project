@@ -1,0 +1,29 @@
+@import "~taro-ui/dist/style/components/tab-bar.scss";
+@import "~taro-ui/dist/style/components/badge.scss";
+@import "~taro-ui/dist/style/components/tabs.scss";
+@import "~taro-ui/dist/style/components/icon.scss";
+@import "~taro-ui/dist/style/components/countdown.scss";
+
+.at-tabs__item{
+  font-size: 24px;
+  color: #5a595a;
+}
+
+.at-tabs__item--active{
+  color: black;
+  font-weight: bolder;
+}
+
+.at-tabs__item-underline{
+  background-color: black;
+  height: 2PX;
+}
+
+.at-countdown__separator{
+  font-size: 18rpx;
+}
+
+.at-countdown__time-box{
+  font-size: 25rpx;
+  color: black;
+}
