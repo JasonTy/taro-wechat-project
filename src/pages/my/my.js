@@ -1,6 +1,7 @@
 import Taro from '@tarojs/taro';
 import {View, OpenData} from '@tarojs/components'
 import NoticebarIndex from '../../components/Noticebar/Noticebar'
+import NavigationIndex from '../../components/Navigation/Navigation'
 import './my.scss'
 
 export default class MyIndex extends Taro.Component{
@@ -11,7 +12,7 @@ export default class MyIndex extends Taro.Component{
           <NoticebarIndex />
         </View>
         <View style={{height: '40px', width: '100%'}}></View>
-        <View style={{position: 'relative'}}>
+        <View style={{position: 'relative', height: '300px'}}>
           <View className='backgroundImg' style={{height: '200px', width: '100%', background: 'url(https://jasonwechatimg.oss-cn-beijing.aliyuncs.com/004.png)', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: '100% 100%'}} >
           </View>
           {/*<View style={{backgroundColor: 'rgba(255,0,0,0.5)', width: '100%',  height: '200px',  borderBottomRightRadius: '30px', borderBottomLeftRadius: '30px'}}></View>*/}
@@ -53,6 +54,11 @@ export default class MyIndex extends Taro.Component{
               </View>
             </View>
           </View>
+        </View>
+        <View style={{margin: '0px 5%'}}>
+          <NavigationIndex sTitle='无服务订单' title='收花日历' />
+          <NavigationIndex sTitle='' title='近期福利' />
+          <NavigationIndex sTitle='' title='我的服务' isShow={false} />
         </View>
       </View>
     )
