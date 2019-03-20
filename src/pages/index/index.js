@@ -3,6 +3,7 @@ import {View} from '@tarojs/components'
 import TabsIndex from '../../components/Tabs/Tabs'
 import FlexIndex from '../../components/Flex/Flex'
 import AtTabBarIndex from '../../components/AtTabBar/AtTabBar'
+import MyIndex from '../my/my'
 
 export default class Index extends Taro.Component {
   // config = {
@@ -17,9 +18,11 @@ export default class Index extends Taro.Component {
   }
 
   handleClick (value) {
-    this.setState({
-      currents: value
-    })
+    if (value != this.state.currents) {
+      this.setState({
+        currents: value
+      })
+    }
   }
 
   componentDidMount() {
@@ -31,7 +34,7 @@ export default class Index extends Taro.Component {
         <View>
           {this.state.currents === 0 && <TabsIndex />}
           {this.state.currents === 1 && <FlexIndex />}
-          {this.state.currents === 2 && <FlexIndex />}
+          {this.state.currents === 2 && <MyIndex />}
           <AtTabBarIndex onClick={this.handleClick} currents={this.state.currents} />
         </View>
     )

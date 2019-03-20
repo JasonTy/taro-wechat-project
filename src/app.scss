@@ -3,6 +3,7 @@
 @import "~taro-ui/dist/style/components/tabs.scss";
 @import "~taro-ui/dist/style/components/icon.scss";
 @import "~taro-ui/dist/style/components/countdown.scss";
+@import "~taro-ui/dist/style/components/noticebar.scss";
 
 .at-tabs__item{
   font-size: 24px;
@@ -26,4 +27,15 @@
 .at-countdown__time-box{
   font-size: 25rpx;
   color: black;
+}
+
+.at-icon-volume-plus::before{
+  color: #e59ba9;
+}
+.at-noticebar{
+  color: black;
+  font-size: 24rpx;
+  background-color: #fae4e6;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }

@@ -1,0 +1,73 @@
+@import "~taro-ui/dist/style/components/flex.scss";
+.backgroundImg{
+  position: relative;
+  opacity: 0.4;
+  //-webkit-filter: blur(2px);
+  //-moz-filter: blur(2px);
+  //-o-filter: blur(2px);
+  //-ms-filter: blur(2px);
+  //filter: blur(2px);
+}
+
+.iconPendingPayment{
+  background: url(https://jasonwechatimg.oss-cn-beijing.aliyuncs.com/pendingPayment.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.iconToBeShipped{
+  background: url(https://jasonwechatimg.oss-cn-beijing.aliyuncs.com/toBeShipped.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.iconEvaluated{
+  background: url(https://jasonwechatimg.oss-cn-beijing.aliyuncs.com/evaluated.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.iconComplete{
+  background: url(https://jasonwechatimg.oss-cn-beijing.aliyuncs.com/complete.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.headImg{
+  position: relative;
+  overflow:hidden;
+  display: block;
+  width: 140rpx;
+  height: 140rpx;
+  margin: 20rpx;
+  margin-top: 50rpx;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.userInfo{
+  position: relative;
+  width: 100%;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 26rpx;
+  border-radius:40%;
+}
+
+.at-col{
+  font-size: 23rpx;
+  text-align: center;
+}
+
+.height120{
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+}
