@@ -28,7 +28,7 @@ export default class NavigationIndex extends Taro.Component{
             {this.props.title || this.state.title}
           </View>
         {this.state.isShow ?  <View style={{display: 'inline-block', float: 'right', height: '20px', lineHeight: '20px'}}>
-          <View className='zhanKai' style={{display: 'inline-block', width: '15px', height: '15px'}}></View>
+          <View className='zhanKai' style={{display: 'inline-block', width: '10px', height: '10px'}}></View>
         </View> : null}
 
           <View style={{display: 'inline-block', float: 'right', fontWeight: '200', fontSize: '22rpx', height: '20px', lineHeight: '20px', marginRight: '8px'}}>

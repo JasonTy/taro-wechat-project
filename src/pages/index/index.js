@@ -2,9 +2,9 @@ import Taro from '@tarojs/taro';
 import {View} from '@tarojs/components'
 import TabNewIndex from '../../components/TabNew/TabNew'
 // import TabsIndex from '../../components/Tabs/Tabs'
-import FlexIndex from '../../components/Flex/Flex'
 import AtTabBarIndex from '../../components/AtTabBar/AtTabBar'
 import MyIndex from '../my/my'
+import FindIndex from '../find/find'
 
 export default class Index extends Taro.Component {
   // config = {
@@ -32,9 +32,9 @@ export default class Index extends Taro.Component {
 
   render () {
     return (
-        <View>
+        <View style={{width: '100%', height: '100%'}}>
           {this.state.currents === 0 && <TabNewIndex />}
-          {this.state.currents === 1 && <FlexIndex />}
+          {this.state.currents === 1 && <FindIndex />}
           {this.state.currents === 2 && <MyIndex />}
           <AtTabBarIndex onClick={this.handleClick} currents={this.state.currents} />
         </View>

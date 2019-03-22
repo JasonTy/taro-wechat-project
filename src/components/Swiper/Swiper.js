@@ -23,7 +23,7 @@ export default class SwiperIndex extends Taro.Component {
     const banners = this.state.banners
     return (
       <View>
-        <Swiper indicatorDots circular autoplay style='height: 200px'>
+        <Swiper indicatorDots circular autoplay style='height: 170px'>
           {
             banners.map((banner, index) => {
               return (
