@@ -1,5 +1,6 @@
 import Taro from '@tarojs/taro';
 import { View} from '@tarojs/components'
+import './Navigation.scss'
 
 // 我的中导航栏
 export default class NavigationIndex extends Taro.Component{
