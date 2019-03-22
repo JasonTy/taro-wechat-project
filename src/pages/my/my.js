@@ -2,6 +2,7 @@ import Taro from '@tarojs/taro';
 import {View, OpenData} from '@tarojs/components'
 import NoticebarIndex from '../../components/Noticebar/Noticebar'
 import NavigationIndex from '../../components/Navigation/Navigation'
+import MyCardIndex from '../../components/MyCard/MyCard'
 import './my.scss'
 
 export default class MyIndex extends Taro.Component{
@@ -56,10 +57,12 @@ export default class MyIndex extends Taro.Component{
           </View>
         </View>
         <View style={{margin: '0px 5%'}}>
-          <NavigationIndex sTitle='无服务订单' title='收花日历' />
+          <NavigationIndex sTitle='无服务中订单' title='收花日历' />
           <NavigationIndex sTitle='' title='近期福利' />
+          <View style={{background: 'url(http://ci.xiaohongshu.com/2a6ab30b-d324-4f3a-ba54-ed12371f9d52?imageView2/2/w/1080/format/jpg)', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: '100% 100%', height: '150px', width: '100%'}}></View>
           <NavigationIndex sTitle='' title='我的服务' isShow={false} />
         </View>
+        <MyCardIndex />
       </View>
     )
   }

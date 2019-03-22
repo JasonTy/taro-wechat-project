@@ -1,0 +1,41 @@
+@import "~taro-ui/dist/style/components/flex.scss";
+
+.at-col{
+  font-size: 23rpx;
+  width: 25%;
+}
+
+.coupon{
+  background: url(https://jasonwechatimg.oss-cn-beijing.aliyuncs.com/coupon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.customerService{
+  background: url(https://jasonwechatimg.oss-cn-beijing.aliyuncs.com/customer-service.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.deliverGoods{
+  background: url(https://jasonwechatimg.oss-cn-beijing.aliyuncs.com/deliver-goods03.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.gift{
+  background: url(https://jasonwechatimg.oss-cn-beijing.aliyuncs.com/gift05.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.proposal{
+  background: url(https://jasonwechatimg.oss-cn-beijing.aliyuncs.com/proposal.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}

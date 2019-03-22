@@ -14,6 +14,7 @@ export default class AtTabBarIndex extends Taro.Component {
   render () {
     return (
       <View>
+
         <AtTabBar
           fixed
           tabList={[
@@ -21,8 +22,8 @@ export default class AtTabBarIndex extends Taro.Component {
             { title: '发现', iconType: 'camera' },
             { title: '我的', iconType: 'folder'}
           ]}
-          iconSize={18}
-          fontSize={12}
+          iconSize={22}
+          fontSize={10}
           color='#ccc'
           selectedColor='black'
           onClick={this.props.onClick.bind(this)}
