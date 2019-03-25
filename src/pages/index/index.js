@@ -5,6 +5,7 @@ import TabNewIndex from '../../components/TabNew/TabNew'
 import AtTabBarIndex from '../../components/AtTabBar/AtTabBar'
 import MyIndex from '../my/my'
 import FindIndex from '../find/find'
+import './index.scss'
 
 export default class Index extends Taro.Component {
   // config = {

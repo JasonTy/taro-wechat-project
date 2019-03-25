@@ -1,10 +1,12 @@
 import Taro from '@tarojs/taro'
-import { Swiper, SwiperItem, View } from '@tarojs/components'
+import { Swiper, SwiperItem, View, ScrollView } from '@tarojs/components'
 import { AtTabs } from 'taro-ui'
 import SwiperIndex from '../Swiper/Swiper'
 import FlexIndex from '../Flex/Flex'
 import SwiperContent from '../Swiper/SwiperContent'
 import ProductListIndex from '../Product/ProductList'
+import SwiperNewContentIndex from '../Swiper/SwiperNewContent'
+import './TabNew.scss'
 
 // Tab 组件
 export default class TabNewIndex extends Taro.Component{
@@ -12,6 +14,7 @@ export default class TabNewIndex extends Taro.Component{
     super(...arguments)
     this.state = {
       current: 0,
+      clientHeight: 0
     }
   }
   handleClick (value) {
@@ -23,6 +26,17 @@ export default class TabNewIndex extends Taro.Component{
   handleChange = (e) => {
     this.setState({
       current: e.detail.current
+    })
+  }
+
+  componentDidMount () {
+    var that = this;
+    wx.getSystemInfo({
+      success: function (res) {
+        that.setState({
+          clientHeight: res.windowHeight - 88
+        })
+      }
     })
   }
 
@@ -54,32 +68,49 @@ export default class TabNewIndex extends Taro.Component{
           </View>
         </View>
         <View>
-          <Swiper style={{height: '800px'}} onChange={this.handleChange} current={this.state.current}>
-            <SwiperItem key={0}>
-              <SwiperIndex />
-              <FlexIndex />
-              <SwiperContent />
+          <Swiper onChange={this.handleChange} current={this.state.current} style={{overflow:'hidden', height: this.state.clientHeight?this.state.clientHeight+'px':'auto'}}>
+            <SwiperItem key={0} style={{overflow: 'hidden'}}>
+              <ScrollView scrollY scrollTop='0' style={{height: '100%'}}>
+                <SwiperIndex />
+                <FlexIndex />
+                <SwiperContent />
+                <SwiperNewContentIndex />
+              </ScrollView>
             </SwiperItem>
-            <SwiperItem key={1}>
-              <ProductListIndex title='简花' sTitle='从简单中发现美好' />
+            <SwiperItem key={1} style={{overflow: 'hidden'}}>
+              <ScrollView scrollY scrollTop='0' style={{height: '100%'}}>
+                <ProductListIndex title='简花' sTitle='从简单中发现美好' />
+              </ScrollView>
             </SwiperItem>
-            <SwiperItem key={2}>
-              <ProductListIndex title='混合' sTitle='享受繁复之美' />
+            <SwiperItem key={2} style={{overflow: 'hidden'}}>
+              <ScrollView scrollY scrollTop='0' style={{height: '100%'}}>
+                <ProductListIndex title='混合' sTitle='享受繁复之美' />
+              </ScrollView>
             </SwiperItem>
-            <SwiperItem key={3}>
-              <ProductListIndex title='MINI' sTitle='寻觅微处之美' />
+            <SwiperItem key={3} style={{overflow: 'hidden'}}>
+              <ScrollView scrollY scrollTop='0' style={{height: '100%'}}>
+                <ProductListIndex title='MINI' sTitle='寻觅微处之美' />
+              </ScrollView>
             </SwiperItem>
-            <SwiperItem key={4}>
-              <ProductListIndex title='礼品花' sTitle='恰到好处的美好' />
+            <SwiperItem key={4} style={{overflow: 'hidden'}}>
+              <ScrollView scrollY scrollTop='0' style={{height: '100%'}}>
+                <ProductListIndex title='礼品花' sTitle='恰到好处的美好' />
+              </ScrollView>
             </SwiperItem>
-            <SwiperItem key={5}>
-              <ProductListIndex title='花瓶' sTitle='每束花都要有个家' />
+            <SwiperItem key={5} style={{overflow: 'hidden'}}>
+              <ScrollView scrollY scrollTop='0' style={{height: '100%'}}>
+                <ProductListIndex title='花瓶' sTitle='每束花都要有个家' />
+              </ScrollView>
             </SwiperItem>
-            <SwiperItem key={6}>
+            <SwiperItem key={6} style={{overflow: 'hidden'}}>
+              <ScrollView scrollY scrollTop='0' style={{height: '100%'}}>
               <ProductListIndex title='家居新品' sTitle='为生活增加技巧' />
+              </ScrollView>
             </SwiperItem>
-            <SwiperItem key={7}>
-              <ProductListIndex title='桌面小清新' sTitle='从指间诞生的绿意世界' />
+            <SwiperItem key={7} style={{overflow: 'hidden'}}>
+              <ScrollView scrollY scrollTop='0' style={{height: '100%'}}>
+                <ProductListIndex title='桌面小清新' sTitle='从指间诞生的绿意世界' />
+              </ScrollView>
             </SwiperItem>
           </Swiper>
         </View>
