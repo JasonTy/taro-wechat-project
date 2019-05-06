@@ -30,18 +30,10 @@ export default class SwiperNewContent extends Taro.Component{
     this.setState({
       content: [{
         image: 'http://ci.xiaohongshu.com/2a6ab30b-d324-4f3a-ba54-ed12371f9d52?imageView2/2/w/1080/format/jpg',
-        title: '闪购桃花',
-        day: 2,
-        hours: 20,
-        minutes: 34,
-        seconds: 0
+        title: '闪购桃花'
       }, {
         image: 'http://ci.xiaohongshu.com/2a6ab30b-d324-4f3a-ba54-ed12371f9d52?imageView2/2/w/1080/format/jpg',
-        title: '闪购桃花02',
-        day: 2,
-        hours: 24,
-        minutes: 50,
-        seconds: 0
+        title: '闪购桃花02'
       }]
     })
   }
@@ -72,7 +64,7 @@ export default class SwiperNewContent extends Taro.Component{
           </View>
           <View style={{clear: 'both'}}></View>
         </View>
-        <Swiper onChange={this.handleChange} circular style={{height: '300px'}}>
+        <Swiper onChange={this.handleChange} style={{height: '300px'}}>
           <View style={{width: '80%', height: '100%', position: 'relative'}}>
           {
             contents.map((obj, index) => {

@@ -6,7 +6,7 @@ import './Flex.scss'
 export default class FlexIndex extends Taro.Component{
   render() {
     return (
-      <View style='margin-top: 30px;'>
+      <View style='margin-top: 10px;'>
         <View className='at-row at-row__align--start'>
           <View style='height:200px;' className='at-col'>
             <View style='height: 65%;position:relative;'>

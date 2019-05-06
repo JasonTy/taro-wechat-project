@@ -48,7 +48,7 @@ export default class SwiperContent extends Taro.Component{
     })
   }
 
-  handleChange = (e) => {
+  handleChange01 = (e) => {
     this.setState({
       currentIndex: e.detail.current
     })
@@ -74,7 +74,7 @@ export default class SwiperContent extends Taro.Component{
           </View>
           <View style={{clear: 'both'}}></View>
         </View>
-        <Swiper onChange={this.handleChange}>
+        <Swiper onChange={this.handleChange01}>
           {
             contents.map((obj, index) => {
               return (

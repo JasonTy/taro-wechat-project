@@ -6,15 +6,17 @@ export default class CountdownPage extends Taro.Component {
   constructor(props) {
     super(props)
     this.setState({
-      day: 0,
-      hours: 0,
-      minutes: 0,
-      seconds: 0
+      day: this.props.day || 0,
+      hours: this.props.hours || 0,
+      minutes: this.props.minutes || 0,
+      seconds: this.props.seconds || 0
     })
   }
 
-  componentDidMount () {
-    this.setState(this.props)
+  clearTimer () {
+    if (this.timer) {
+      clearInterval(this.timer)
+    }
   }
 
   onTimeUp () {
@@ -29,10 +31,11 @@ export default class CountdownPage extends Taro.Component {
     return (
       <AtCountdown
         isShowDay
-        day={this.props.day || this.state.day}
-        hours={this.props.hours || this.state.hours}
-        minutes={this.props.minutes || this.state.minutes}
-        seconds={this.props.seconds || this.state.seconds}
+        day={this.state.day}
+        hours={this.state.hours}
+        minutes={this.state.minutes}
+        seconds={this.state.seconds}
+        onTimeUp={this.onTimeUp.bind(this)}
       />
     )
   }

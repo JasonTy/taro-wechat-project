@@ -14,7 +14,7 @@ export default class TabNewIndex extends Taro.Component{
     super(...arguments)
     this.state = {
       current: 0,
-      clientHeight: 0
+      clientHeight: 1200
     }
   }
   handleClick (value) {
@@ -30,14 +30,14 @@ export default class TabNewIndex extends Taro.Component{
   }
 
   componentDidMount () {
-    var that = this;
-    wx.getSystemInfo({
-      success: function (res) {
-        that.setState({
-          clientHeight: res.windowHeight - 88
-        })
-      }
-    })
+    // var that = this;
+    // wx.getSystemInfo({
+    //   success: function (res) {
+    //     that.setState({
+    //       clientHeight: res.windowHeight - 88
+    //     })
+    //   }
+    // })
   }
 
   render () {
@@ -68,7 +68,7 @@ export default class TabNewIndex extends Taro.Component{
           </View>
         </View>
         <View>
-          <Swiper onChange={this.handleChange} current={this.state.current} style={{overflow:'hidden', height: this.state.clientHeight?this.state.clientHeight+'px':'auto'}}>
+          <Swiper onChange={this.handleChange} current={this.state.current} style={{overflow:'hidden', height: this.state.clientHeight?this.state.clientHeight+'rpx':'auto'}}>
             <SwiperItem key={0} style={{overflow: 'hidden'}}>
               <ScrollView scrollY scrollTop='0' style={{height: '100%'}}>
                 <SwiperIndex />
